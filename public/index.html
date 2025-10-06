@@ -4,20 +4,102 @@
   <meta charset="UTF-8" />
   <title>Ardion Proxy</title>
   <style>
-    body { font-family: Arial, sans-serif; background:#f4f4f4; padding:20px; }
-    #form { text-align:center; margin:20px; }
-    input { padding:10px; width:70%; border:1px solid #ccc; border-radius:6px; }
-    button { padding:10px 20px; margin-left:10px; border:none; background:#333; color:white; border-radius:6px; cursor:pointer; }
-    iframe { width:100%; height:600px; border:1px solid #ccc; border-radius:8px; margin-top:20px; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0d0d0d;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 30px;
+      text-align: center;
+      background: linear-gradient(90deg, #6a00f4, #ff007f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2em;
+      font-weight: bold;
+      text-shadow: 0 0 12px #ff007f88, 0 0 24px #6a00f488;
+    }
+
+    #form {
+      margin: 20px auto;
+      text-align: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    input {
+      padding: 12px;
+      width: 65%;
+      max-width: 600px;
+      background: #1a1a1a;
+      border: 1px solid #444;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1em;
+      outline: none;
+      box-shadow: 0 0 8px #6a00f444 inset;
+    }
+
+    button {
+      padding: 12px 24px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(90deg, #6a00f4, #ff007f);
+      color: #fff;
+      text-transform: uppercase;
+      box-shadow: 0 0 10px #ff007f88, 0 0 20px #6a00f488;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 16px #ff007f, 0 0 28px #6a00f4;
+    }
+
+    iframe {
+      width: 95%;
+      max-width: 1100px;
+      height: 650px;
+      margin: 30px auto;
+      border: 2px solid #6a00f4;
+      border-radius: 12px;
+      background: #111;
+      box-shadow: 0 0 15px #6a00f488, 0 0 25px #ff007f44;
+    }
+
+    footer {
+      margin: 30px auto;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+    }
   </style>
 </head>
 <body>
-  <h2>🌐 Ardion Proxy</h2>
+  <header>🌐 Ardion Proxy</header>
+
   <div id="form">
     <input type="text" id="url" placeholder="Enter URL (https://...)" />
     <button onclick="loadProxy()">Go</button>
   </div>
+
   <iframe id="viewer"></iframe>
+
+  <footer>
+    <p>⚡ Powered by Ardion Proxy | Dark + Neon Theme</p>
+  </footer>
 
   <script>
     function loadProxy() {

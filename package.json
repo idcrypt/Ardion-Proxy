@@ -1,0 +1,16 @@
+{
+  "name": "ardion-proxy",
+  "version": "1.0.0",
+  "description": "Ardion Proxy - simple web proxy site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
+    "morgan": "^1.10.0",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^7.1.0"
+  }
+}
